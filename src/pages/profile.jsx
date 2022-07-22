@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useStateValue } from '../utils/store';
 import styles from '../styles/pages/Profile.module.css';
 
 const childrensData = [
@@ -80,8 +79,6 @@ const childrensData = [
 
 const Profile = () => {
   const { regno } = useParams();
-
-  const [{ user }, dispatch] = useStateValue();
 
   const data = childrensData.find((dt) => dt.regno === regno.toString());
 

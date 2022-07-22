@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { StoreProvider } from './utils/store';
 import Layout from './components/Layout';
 import Home from './pages/home';
 import Login from './pages/login';
@@ -10,7 +9,6 @@ import Profile from './pages/profile';
 
 function App() {
   return (
-    <StoreProvider>
       <Router>
         <Layout>
           <Routes>
@@ -22,7 +20,6 @@ function App() {
           </Routes>
         </Layout>
       </Router>
-    </StoreProvider>
   );
 }
 
